@@ -272,6 +272,7 @@ module Balanced
             paginate(options).first
           else
             response = Balanced.get scope, options
+            @response = response
             construct_from_response response.body
         end
       end
